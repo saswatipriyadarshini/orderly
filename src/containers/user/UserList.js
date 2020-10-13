@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import { getCustomerAction } from "../../actions/CustomerAction";
 import 'antd/dist/antd.css';
 import "./index.css";
-import { Table } from 'antd';
+import { Table, Row, Col } from 'antd';
+import { UserOutlined, DollarOutlined, HomeOutlined, PhoneOutlined, InfoCircleOutlined } from '@ant-design/icons';
+
 
 class UserList extends Component{
   constructor(props) {
@@ -62,20 +64,39 @@ class UserList extends Component{
     const { userInfo, columns, customers } = this.state;
     return(
       <div className='orderly-customer-list__container'>
-        <Table style={{width: '50%'}} columns={columns} dataSource={ customers && customers.data } />
-        <div className={`${common_class}__container`}>
-          <div className={`${common_class}-cross-btn`}>&times;</div>
-          <div className={common_class}>
-            <p>{userInfo && userInfo.name}</p>
-            <p>Purchases</p>
-            <p>Flat</p>
-            <p>Phone</p>
-           <div>
-             don't like tomato sauce <br/>
-             likes extra oregano
-           </div>
-          </div>
-        </div>
+        <Row>
+          <Col sm={24} md={12} bg={12}>
+            <Table columns={columns} dataSource={ customers && customers.data } />
+          </Col>
+          <Col sm={24} md={12}>
+            <div className={`${common_class}__container`}>
+              {/*<div className={`${common_class}-cross-btn`}>&times;</div>*/}
+              <div className={common_class}>
+                <div>
+                  <p>name</p>
+                  <h3><UserOutlined />&nbsp;{userInfo && userInfo.name}</h3>
+                </div>
+                <div>
+                  <p>purchases</p>
+                  <h3><DollarOutlined />&nbsp;1212</h3>
+                </div>
+                <div>
+                  <p>flat</p>
+                  <h3><HomeOutlined /> &nbsp; {userInfo && userInfo.flat}</h3>
+                </div>
+                <div>
+                  <p>phone</p>
+                  <h3><PhoneOutlined /> &nbsp;123456789</h3>
+                </div>
+                <div>
+                  <p>Notes</p>
+                  <h3><InfoCircleOutlined /> &nbsp;
+                    don't like tomato sauce likes extra oregano</h3>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
       </div>
     )
   }

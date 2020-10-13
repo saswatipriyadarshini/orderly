@@ -1,18 +1,11 @@
 .orderly-customer-list__container{
-  display: flex;
-  width: 100%;
+
 }
 .orderly-customer-details__container{
-  /*position: absolute;*/
-  /*right: 0;*/
-  /*height: 100%;*/
-  /*top: 0;*/
-  background: aquamarine;
-  width: 50%;
+
 }
 .orderly-customer-details{
-  padding: 1.5rem;
-  text-align: center;
+  padding: 1.5rem 7.5rem;
 }
 .orderly-customer-name{
   cursor: pointer;
@@ -32,4 +25,15 @@
   background: purple;
   color: #fff;
   font-weight: 700;
+}
+.orderly-customer-details h3{
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+}
+.orderly-customer-details p{
+  margin: 0 24px;
+  font-size: 14px;
+  color: grey;
+  font-weight: 500;
 }
