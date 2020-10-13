@@ -14,7 +14,6 @@ export function getCustomerAction() {
         error => console.log('An error occurred.', error),
       )
       .then((json) => {
-        console.log(json.result);
         dispatch(getCustomer(json.result));
         },
       );

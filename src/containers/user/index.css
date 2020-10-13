@@ -1,0 +1,35 @@
+.orderly-customer-list__container{
+  display: flex;
+  width: 100%;
+}
+.orderly-customer-details__container{
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*height: 100%;*/
+  /*top: 0;*/
+  background: aquamarine;
+  width: 50%;
+}
+.orderly-customer-details{
+  padding: 1.5rem;
+  text-align: center;
+}
+.orderly-customer-name{
+  cursor: pointer;
+  font-weight: 600;
+}
+.orderly-customer-name:hover{
+  color: purple;
+  font-weight: 600;
+}
+.orderly-customer-details-cross-btn{
+  text-align: right;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.orderly-customer-list__container .ant-table-thead tr th{
+  background: purple;
+  color: #fff;
+  font-weight: 700;
+}
