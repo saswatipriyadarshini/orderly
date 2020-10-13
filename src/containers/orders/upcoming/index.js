@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { connect } from 'react-redux'
-import {getUpcomingOrders} from "../../../actions/getOrdersAction";
+import {getUpcomingOrders} from "../../../actions/GetOrdersAction";
+import {getCustomerAction} from "../../../actions/CustomerAction";
 
 class Upcoming extends Component{
   constructor(props) {
@@ -74,6 +75,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getOrders: () => {
       dispatch(getUpcomingOrders());
+      // dispatch(getCustomerAction());
     }
   };
 };

@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import './index.css';
-import Card from "../../../components/card";
 
 export default class Total extends Component{
   constructor(props) {

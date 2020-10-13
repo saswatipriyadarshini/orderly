@@ -1,4 +1,4 @@
-import {REQUEST_ORDER, POST_ORDER} from "../actions/postOrdersAction";
+import {REQUEST_ORDER, POST_ORDER} from "../actions/PostOrdersAction";
 
 const reducer = (state = {}, action) => {
   switch (action.type){

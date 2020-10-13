@@ -1,4 +1,4 @@
-import { REQUEST_ORDERS, RECEIVE_ORDERS } from "../actions/getOrdersAction";
+import { REQUEST_ORDERS, RECEIVE_ORDERS } from "../actions/GetOrdersAction";
 
 const reducer = (state = {}, action) => {
   switch (action.type) {

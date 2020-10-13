@@ -3,7 +3,7 @@ import FormGroup from "../../components/formGroup";
 import { Select } from 'antd';
 import 'antd/dist/antd.css';
 import { connect } from "react-redux";
-import { postNewOrderAction } from "../../actions/postOrdersAction";
+import { postNewOrderAction } from "../../actions/PostOrdersAction";
 
 const { Option } = Select;
 
@@ -128,10 +128,10 @@ class NavBar extends Component{
                     {/*  }*/}
                     {/*</select>*/}
                     <Select
-                      defaultValue="lucy"
+                      defaultValue={orderTypes[0]}
                       style={{ width: '100%'}}
                       size={"large"}
-                      onChange={this.onChangeHandler.bind(this)}
+                      // onChange={this.onChangeHandler.bind(this)}
                     >
                         {
                           orderTypes && orderTypes.map((item, index) => {
