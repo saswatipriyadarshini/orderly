@@ -50,20 +50,14 @@ class NavBar extends Component{
 
   render(){
     const {orderTypes, userData} = this.state;
-    console.log('userdata', userData);
     return(
       <Fragment>
         <div>
           <nav className="navbar fixed-top navbar-light bg-light">
-            {/*<ul className='navbar-nav mr-auto'>*/}
-              <a className="navbar-brand" href="#">Orderly</a>
-            {/*</ul>*/}
+            <a className="navbar-brand" href="#">Orderly</a>
             <ul className="navbar-nav ml-auto navbar-right row" style={{flexDirection: 'row', alignItems: 'center'}}>
-
               <li className="nav-item dropdown input-group col-8">
-
                 <div className='input-group-prepend'>
-
                   <select className="custom-select" id="inputGroupSelect01" style={{width: 'fit-content'}}>
                     <option selected>All</option>
                     <option value="1">name</option>
@@ -133,13 +127,13 @@ class NavBar extends Component{
                       size={"large"}
                       // onChange={this.onChangeHandler.bind(this)}
                     >
-                        {
-                          orderTypes && orderTypes.map((item, index) => {
-                            return (
-                              <Option key={'key_'+index} value={item}>{item}</Option>
-                            )
-                          })
-                        }
+                      {
+                        orderTypes && orderTypes.map((item, index) => {
+                          return (
+                            <Option key={'key_'+index} value={item}>{item}</Option>
+                          )
+                        })
+                      }
                     </Select>
                   </div>
 
@@ -182,7 +176,8 @@ class NavBar extends Component{
               </div>
               <div className="modal-footer">
                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary" onClick={this.saveOrderHandler.bind(this)}>Save changes</button>
+                <button type="button" className="btn btn-primary"
+                        onClick={this.saveOrderHandler.bind(this)}>Save changes</button>
               </div>
             </div>
           </div>

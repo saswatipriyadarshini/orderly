@@ -42,7 +42,7 @@ class UserList extends Component{
 
   componentDidMount() {
     this.props.getCustomers();
-  }
+    }
 
   static getDerivedStateFromProps(nextProps, prevState) {
     if(nextProps.customers !== prevState.customers) {
